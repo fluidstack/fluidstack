@@ -1,0 +1,164 @@
+@import url(//fonts.googleapis.com/css?family=Poiret+One:400:normal);
+/*========================================================
+                    Custom font styles
+=========================================================*/
+body {
+    font-family: 'Poiret One', sans-serif;
+}
+
+p.italic {
+    font-family: 'Droid Serif', sans-serif;
+}
+#header h1 {
+    font-weight:normal;
+}
+#header h2 {
+    font-size: 30px !important;
+    margin: 15px 0 115px;
+}
+
+h4 {
+    font-size: 25px;
+    font-style: italic;
+}
+/*========================================================
+                    Custom menu styles
+=========================================================*/
+.sf-menu > li > a {
+    font-size: 25px;
+}
+/*========================================================
+                    Custom layout styles
+=========================================================*/
+#header {
+    background: url(../images/page1-img110.jpg) no-repeat;
+    padding-top: 26px;
+}
+
+#header .circle {
+    height: 316px;
+    width: 316px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid #ffaa3f;
+}
+
+#header .circle img {
+    width: 170px;
+}
+
+#content .box3 .img-border {
+    border: 2px solid #ffffff;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#header h1 {
+    font-size: 90px;
+    line-height: 80px;
+}
+
+.t__up {
+    text-transform: lowercase;
+}
+
+#header h2 {
+    font-size: 40px;
+}
+
+#content .img-border img {
+    width: 110px;
+    height: 147px;
+    padding: 10% 0;
+}
+/*========================================================
+                    Custom Stellar(parallaxBG) styles
+=========================================================*/
+.stellar-section .stellar1 {
+    background-image: url(../images/page1-img2.jpg);
+}
+
+.stellar-section .stellar3 {
+    background-image: url(../images/page1-img4.jpg);
+  
+}
+.stellar-section .stellar4 {
+    background-image: url(../images/page1-img5.jpg);
+}
+/*========================================================
+                    Custom description styles
+=========================================================*/
+#content .box .circle img.c1 {
+    left: 12px;
+    top: 11px;
+    width: 45px;
+}
+
+#content .box .circle img.c2 {
+    left: 12px;
+    top: 19px;
+    width: 45px;
+}
+
+#content .box .circle img.c3 {
+    left: 16px;
+    top: 11px;
+    width: 35px;
+}
+/*========================================================
+                    Custom contact form styles
+=========================================================*/
+#content .t__center .circle-w-bor img.facebook {
+    width: 40px;
+    padding-top: 20px;
+}
+
+#content .t__center .circle-w-bor img.twitter {
+    width: 70px;
+    padding-top: 35px;
+}
+
+.fluidstrong {
+    font-weight: bold;
+}
+
+#contact-form .empty-message, #contact-form .error-message {
+    color: #eea156;
+    font-size: 16px;
+}
+/*========================================================
+                    Custom media queries styles
+=========================================================*/
+@media (max-width: 1199px) and (min-width: 980px){
+
+    .preffix_6 {
+        margin-left: 280px;
+    }
+}
+@media only screen and (max-width: 736px) and (min-width: 415px) {
+
+    #header .circle {
+       /* height: 216px;*/
+    }
+
+    #header .circle img {
+        padding: 10% 0;
+    }
+} 
+@media only screen and (max-width: 414px) {
+
+    #header .circle {
+        width: 100%;
+        height: auto;
+    }
+    #header .circle img {
+        padding: 10% 0;
+        width: 153px;
+    }
+    #header h1 {
+        font-size: 67px;
+        padding-left: 6px;
+    }
+    #header h2 {
+        font-size: 20px !important;
+        margin: 5px 0 55px;
+    }
+}

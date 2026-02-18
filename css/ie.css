@@ -1,0 +1,30 @@
+.overlay{
+    background:none;
+    -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000,endColorstr=#7F000000);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000,endColorstr=#7F000000);
+    zoom: 1;
+}
+.white_overlay{
+    background:none;
+    -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7FFFFFFF,endColorstr=#7FFFFFFF);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7FFFFFFF,endColorstr=#7FFFFFFF);
+    zoom: 1;
+}
+.white_overlay_20, #toTop{
+    background:none;
+    -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#33FFFFFF,endColorstr=#33FFFFFF);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#33FFFFFF,endColorstr=#33FFFFFF);
+    zoom: 1;
+}
+.white_overlay_38{
+    background:none;
+    -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#60FFFFFF,endColorstr=#60FFFFFF);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#60FFFFFF,endColorstr=#60FFFFFF);
+    zoom: 1;
+}
+
+#toTop:hover{
+    background: #000;
+}
+
+
