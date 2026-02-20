@@ -51,6 +51,8 @@ export function initContact() {
     $btnLoader.removeClass('d-none');
     $submitBtn.prop('disabled', true);
 
+    const service = $('#serviceSelect').val();
+
     try {
       const { error: dbError } = await supabase
         .from('contact_submissions')
@@ -62,6 +64,16 @@ export function initContact() {
         });
 
       if (dbError) throw dbError;
+
+      const apiUrl = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-contact-email`;
+      await fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, email, phone, service, message }),
+      });
 
       $success.removeClass('d-none');
       $form[0].reset();
