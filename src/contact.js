@@ -25,28 +25,31 @@ export function initContact() {
     let valid = true;
 
     if (!name) {
-      $('#nameInput').addClass('is-invalid');
+      $('#nameInput').addClass('is-invalid').attr('aria-invalid', 'true');
       valid = false;
     } else {
-      $('#nameInput').removeClass('is-invalid');
+      $('#nameInput').removeClass('is-invalid').removeAttr('aria-invalid');
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!email || !emailRegex.test(email)) {
-      $('#emailInput').addClass('is-invalid');
+      $('#emailInput').addClass('is-invalid').attr('aria-invalid', 'true');
       valid = false;
     } else {
-      $('#emailInput').removeClass('is-invalid');
+      $('#emailInput').removeClass('is-invalid').removeAttr('aria-invalid');
     }
 
     if (!message || message.length < 20) {
-      $('#messageInput').addClass('is-invalid');
+      $('#messageInput').addClass('is-invalid').attr('aria-invalid', 'true');
       valid = false;
     } else {
-      $('#messageInput').removeClass('is-invalid');
+      $('#messageInput').removeClass('is-invalid').removeAttr('aria-invalid');
     }
 
-    if (!valid) return;
+    if (!valid) {
+      $form.find('.is-invalid').first().trigger('focus');
+      return;
+    }
 
     $btnText.addClass('d-none');
     $btnLoader.removeClass('d-none');
@@ -61,7 +64,7 @@ export function initContact() {
         if (response.success) {
           $success.removeClass('d-none');
           $form[0].reset();
-          $form.find('.is-invalid').removeClass('is-invalid');
+          $form.find('.is-invalid').removeClass('is-invalid').removeAttr('aria-invalid');
         } else {
           $error.removeClass('d-none');
         }
@@ -78,6 +81,6 @@ export function initContact() {
   });
 
   $form.find('.form-control, .form-select').on('input change', function () {
-    $(this).removeClass('is-invalid');
+    $(this).removeClass('is-invalid').removeAttr('aria-invalid');
   });
 }

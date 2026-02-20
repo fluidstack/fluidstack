@@ -125,6 +125,8 @@
 </head>
 <body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="100">
 
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <header>
   <nav id="mainNav" class="navbar navbar-expand-lg fixed-top navbar-dark" aria-label="Main navigation">
     <div class="container">
@@ -155,8 +157,8 @@
   </nav>
   </header>
 
-  <main>
-  <section id="hero" class="hero-section">
+  <main id="main-content">
+  <section id="hero" class="hero-section" aria-label="Hero">
     <div class="hero-bg-shapes">
       <div class="shape shape-1"></div>
       <div class="shape shape-2"></div>
@@ -190,7 +192,7 @@
           </div>
         </div>
         <div class="col-lg-5 d-none d-lg-block">
-          <div class="hero-visual">
+          <div class="hero-visual" aria-hidden="true">
             <div class="code-window">
               <div class="code-header">
                 <span class="dot dot-red"></span>
@@ -216,12 +218,12 @@
         </div>
       </div>
     </div>
-    <div class="scroll-indicator">
-      <a href="#services"><i class="bi bi-chevron-down"></i></a>
+    <div class="scroll-indicator" aria-hidden="true">
+      <a href="#services" tabindex="-1"><i class="bi bi-chevron-down"></i></a>
     </div>
   </section>
 
-  <section id="services" class="section-padding">
+  <section id="services" class="section-padding" aria-label="Services">
     <div class="container">
       <div class="section-header text-center">
         <span class="section-tag">What We Do</span>
@@ -231,7 +233,7 @@
       <div class="row g-4 mt-4">
         <div class="col-lg-4 col-md-6">
           <div class="service-card" data-tilt>
-            <div class="service-icon">
+            <div class="service-icon" aria-hidden="true">
               <i class="bi bi-code-slash"></i>
             </div>
             <h3>Web Development</h3>
@@ -253,7 +255,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="service-card" data-tilt>
-            <div class="service-icon">
+            <div class="service-icon" aria-hidden="true">
               <i class="bi bi-people"></i>
             </div>
             <h3>Subcontracting</h3>
@@ -268,7 +270,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="service-card" data-tilt>
-            <div class="service-icon">
+            <div class="service-icon" aria-hidden="true">
               <i class="bi bi-palette"></i>
             </div>
             <h3>UI/UX Design</h3>
@@ -283,7 +285,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="service-card" data-tilt>
-            <div class="service-icon">
+            <div class="service-icon" aria-hidden="true">
               <i class="bi bi-cloud"></i>
             </div>
             <h3>Cloud & DevOps</h3>
@@ -298,7 +300,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="service-card" data-tilt>
-            <div class="service-icon">
+            <div class="service-icon" aria-hidden="true">
               <i class="bi bi-cart3"></i>
             </div>
             <h3>E-Commerce</h3>
@@ -313,7 +315,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="service-card" data-tilt>
-            <div class="service-icon">
+            <div class="service-icon" aria-hidden="true">
               <i class="bi bi-graph-up-arrow"></i>
             </div>
             <h3>SEO & Performance</h3>
@@ -328,7 +330,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="service-card" data-tilt>
-            <div class="service-icon">
+            <div class="service-icon" aria-hidden="true">
               <i class="bi bi-globe2"></i>
             </div>
             <h3>Domains & Email</h3>
@@ -343,7 +345,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="service-card" data-tilt>
-            <div class="service-icon">
+            <div class="service-icon" aria-hidden="true">
               <i class="bi bi-brush"></i>
             </div>
             <h3>Brand Identity</h3>
@@ -358,7 +360,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="service-card" data-tilt>
-            <div class="service-icon">
+            <div class="service-icon" aria-hidden="true">
               <i class="bi bi-google"></i>
             </div>
             <h3>Google Services</h3>
@@ -375,7 +377,7 @@
     </div>
   </section>
 
-  <section class="process-section section-padding">
+  <section class="process-section section-padding" aria-label="Our process">
     <div class="container">
       <div class="section-header text-center">
         <span class="section-tag">How We Work</span>
@@ -414,7 +416,7 @@
     </div>
   </section>
 
-  <section id="work" class="section-padding bg-dark-alt">
+  <section id="work" class="section-padding bg-dark-alt" aria-label="Portfolio">
     <div class="container">
       <div class="section-header text-center">
         <span class="section-tag">Portfolio</span>
@@ -422,16 +424,15 @@
         <p class="section-subtitle">A showcase of our recent work across industries and platforms.</p>
       </div>
 
-      <div class="work-filters text-center mt-4 mb-5">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="web">Web Apps</button>
-
-        <button class="filter-btn" data-filter="ecommerce">E-Commerce</button>
-        <button class="filter-btn" data-filter="collaboration">Collaboration</button>
-        <button class="filter-btn" data-filter="brochure">Brochure</button>
+      <div class="work-filters text-center mt-4 mb-5" role="group" aria-label="Filter projects by category">
+        <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter-btn" data-filter="web" aria-pressed="false">Web Apps</button>
+        <button class="filter-btn" data-filter="ecommerce" aria-pressed="false">E-Commerce</button>
+        <button class="filter-btn" data-filter="collaboration" aria-pressed="false">Collaboration</button>
+        <button class="filter-btn" data-filter="brochure" aria-pressed="false">Brochure</button>
       </div>
 
-      <div class="row g-4" id="workGrid">
+      <div class="row g-4" id="workGrid" aria-live="polite">
         <div class="col-lg-6 work-item" data-category="web ecommerce">
           <div class="work-card">
             <div class="work-image">
@@ -555,7 +556,7 @@
     </div>
   </section>
 
-  <section class="testimonials-section section-padding">
+  <section class="testimonials-section section-padding" aria-label="Testimonials">
     <div class="container">
       <div class="section-header text-center">
         <span class="section-tag">Testimonials</span>
@@ -564,8 +565,8 @@
       <div class="row g-4 mt-4">
         <div class="col-lg-4">
           <div class="testimonial-card">
-            <div class="stars">
-              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            <div class="stars" role="img" aria-label="5 out of 5 stars">
+              <i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i>
             </div>
             <p>"Fluidstack transformed our online presence completely. The new brochure site increased our sales by 40% in the first quarter."</p>
             <div class="testimonial-author">
@@ -579,8 +580,8 @@
         </div>
         <div class="col-lg-4">
           <div class="testimonial-card">
-            <div class="stars">
-              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            <div class="stars" role="img" aria-label="5 out of 5 stars">
+              <i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i>
             </div>
             <p>"Professional, responsive, and incredibly talented. They delivered our web app ahead of schedule and it exceeded all expectations."</p>
             <div class="testimonial-author">
@@ -594,8 +595,8 @@
         </div>
         <div class="col-lg-4">
           <div class="testimonial-card">
-            <div class="stars">
-              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            <div class="stars" role="img" aria-label="5 out of 5 stars">
+              <i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i>
             </div>
             <p>"Their attention to detail and technical expertise is unmatched. FluidStack is now our go-to partner for all digital projects."</p>
             <div class="testimonial-author">
@@ -611,7 +612,7 @@
     </div>
   </section>
 
-  <section id="contact" class="section-padding bg-dark-alt">
+  <section id="contact" class="section-padding bg-dark-alt" aria-label="Contact">
     <div class="container">
       <div class="row g-5">
         <div class="col-lg-5">
@@ -621,21 +622,21 @@
             <p>Have a project in mind? We'd love to hear about it. Drop us a message and we'll get back to you within 24 hours.</p>
             <div class="contact-details">
               <div class="contact-item">
-                <div class="contact-icon"><i class="bi bi-envelope"></i></div>
+                <div class="contact-icon" aria-hidden="true"><i class="bi bi-envelope"></i></div>
                 <div>
                   <span class="contact-label">Email</span>
                   <a href="mailto:hello@fluidstack.dev">hello@fluidstack.dev</a>
                 </div>
               </div>
               <div class="contact-item">
-                <div class="contact-icon"><i class="bi bi-geo-alt"></i></div>
+                <div class="contact-icon" aria-hidden="true"><i class="bi bi-geo-alt"></i></div>
                 <div>
                   <span class="contact-label">Location</span>
                   <span>Canberra, Australia</span>
                 </div>
               </div>
               <div class="contact-item">
-                <div class="contact-icon"><i class="bi bi-clock"></i></div>
+                <div class="contact-icon" aria-hidden="true"><i class="bi bi-clock"></i></div>
                 <div>
                   <span class="contact-label">Working Hours</span>
                   <span>Mon - Fri, 9am - 6pm AEST</span>
@@ -646,25 +647,25 @@
         </div>
         <div class="col-lg-7">
           <div class="contact-form-wrapper">
-            <form id="contactForm" novalidate>
+            <form id="contactForm" novalidate aria-label="Contact form">
               <div class="row g-3">
                 <div class="col-md-6">
                   <div class="form-floating">
-                    <input type="text" class="form-control" id="nameInput" placeholder="Your Name" required>
+                    <input type="text" class="form-control" id="nameInput" placeholder="Your Name" required aria-required="true" aria-describedby="nameError" autocomplete="name">
                     <label for="nameInput">Your Name</label>
-                    <div class="invalid-feedback">Please enter your name.</div>
+                    <div class="invalid-feedback" id="nameError" role="alert">Please enter your name.</div>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-floating">
-                    <input type="email" class="form-control" id="emailInput" placeholder="Your Email" required>
+                    <input type="email" class="form-control" id="emailInput" placeholder="Your Email" required aria-required="true" aria-describedby="emailError" autocomplete="email">
                     <label for="emailInput">Your Email</label>
-                    <div class="invalid-feedback">Please enter a valid email.</div>
+                    <div class="invalid-feedback" id="emailError" role="alert">Please enter a valid email.</div>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-floating">
-                    <input type="tel" class="form-control" id="phoneInput" placeholder="Phone Number">
+                    <input type="tel" class="form-control" id="phoneInput" placeholder="Phone Number" autocomplete="tel">
                     <label for="phoneInput">Phone Number</label>
                   </div>
                 </div>
@@ -685,9 +686,9 @@
                 </div>
                 <div class="col-12">
                   <div class="form-floating">
-                    <textarea class="form-control" id="messageInput" placeholder="Your Message" style="height: 150px" required></textarea>
+                    <textarea class="form-control" id="messageInput" placeholder="Your Message" style="height: 150px" required aria-required="true" aria-describedby="messageError"></textarea>
                     <label for="messageInput">Your Message</label>
-                    <div class="invalid-feedback">Please enter a message (min 20 characters).</div>
+                    <div class="invalid-feedback" id="messageError" role="alert">Please enter a message (min 20 characters).</div>
                   </div>
                 </div>
                 <div class="form-field-website" aria-hidden="true">
@@ -698,18 +699,18 @@
                   <button type="submit" class="btn btn-accent btn-lg w-100" id="submitBtn">
                     <span class="btn-text">Send Message</span>
                     <span class="btn-loader d-none">
-                      <span class="spinner-border spinner-border-sm me-2" role="status"></span>
+                      <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
                       Sending...
                     </span>
                   </button>
                 </div>
               </div>
-              <div id="formSuccess" class="alert alert-success mt-3 d-none">
-                <i class="bi bi-check-circle me-2"></i>
+              <div id="formSuccess" class="alert alert-success mt-3 d-none" role="alert">
+                <i class="bi bi-check-circle me-2" aria-hidden="true"></i>
                 Thank you! Your message has been sent. We'll get back to you within 24 hours.
               </div>
-              <div id="formError" class="alert alert-danger mt-3 d-none">
-                <i class="bi bi-exclamation-circle me-2"></i>
+              <div id="formError" class="alert alert-danger mt-3 d-none" role="alert">
+                <i class="bi bi-exclamation-circle me-2" aria-hidden="true"></i>
                 Something went wrong. Please try again or email us directly.
               </div>
             </form>
@@ -720,7 +721,7 @@
   </section>
   </main>
 
-  <footer class="site-footer" aria-label="Site footer">
+  <footer class="site-footer" role="contentinfo" aria-label="Site footer">
     <div class="container">
       <div class="row g-4">
         <div class="col-lg-4">
@@ -730,8 +731,8 @@
           <p class="footer-desc">Crafting exceptional digital experiences since 2009. We turn ideas into reality with code, design, and strategy.</p>
         </div>
         <div class="col-lg-2 col-md-4">
-          <h5 class="footer-heading">Company</h5>
-          <ul class="footer-links">
+          <h5 class="footer-heading" id="footer-company">Company</h5>
+          <ul class="footer-links" aria-labelledby="footer-company">
             <li><a href="#hero">Home</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#work">Our Work</a></li>
@@ -739,8 +740,8 @@
           </ul>
         </div>
         <div class="col-lg-3 col-md-4">
-          <h5 class="footer-heading">Services</h5>
-          <ul class="footer-links">
+          <h5 class="footer-heading" id="footer-services">Services</h5>
+          <ul class="footer-links" aria-labelledby="footer-services">
             <li><a href="#services">Web Development</a></li>
             <li><a href="#services">Subcontracting</a></li>
             <li><a href="#services">UI/UX Design</a></li>
@@ -748,8 +749,8 @@
           </ul>
         </div>
         <div class="col-lg-3 col-md-4">
-          <h5 class="footer-heading">Connect</h5>
-          <ul class="footer-links">
+          <h5 class="footer-heading" id="footer-connect">Connect</h5>
+          <ul class="footer-links" aria-labelledby="footer-connect">
             <li><a href="mailto:hello@fluidstack.dev">hello@fluidstack.dev</a></li>
             <li><a href="privacy.html">Privacy Policy</a></li>
           </ul>

@@ -24,7 +24,7 @@
 #mainNav .nav-link {
   font-size: 0.9375rem;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.75);
   padding: 8px 20px;
   transition: color var(--transition-fast);
   position: relative;
@@ -54,6 +54,14 @@
 
 .navbar-toggler:focus {
   box-shadow: none;
+}
+
+.navbar-toggler:focus-visible {
+  box-shadow: 0 0 0 3px var(--color-accent);
+}
+
+#mainNav .nav-link:focus-visible::after {
+  transform: scaleX(1);
 }
 
 @media (max-width: 991px) {

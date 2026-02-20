@@ -7,8 +7,8 @@ export function initPortfolio() {
   $filterBtns.on('click', function () {
     const filter = $(this).data('filter');
 
-    $filterBtns.removeClass('active');
-    $(this).addClass('active');
+    $filterBtns.removeClass('active').attr('aria-pressed', 'false');
+    $(this).addClass('active').attr('aria-pressed', 'true');
 
     $workItems.each(function () {
       const $item = $(this);
