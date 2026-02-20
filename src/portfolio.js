@@ -12,9 +12,9 @@ export function initPortfolio() {
 
     $workItems.each(function () {
       const $item = $(this);
-      const category = $item.data('category');
+      const categories = String($item.data('category')).split(' ');
 
-      if (filter === 'all' || category === filter) {
+      if (filter === 'all' || categories.includes(filter)) {
         $item.removeClass('hidden').css('opacity', 0).animate({ opacity: 1 }, 400);
       } else {
         $item.animate({ opacity: 0 }, 200, function () {
