@@ -15,7 +15,8 @@
 }
 
 #mainNav .navbar-brand {
-  font-size: 1.25rem;
+  font-family: 'Poiret One', cursive;
+  font-size: 1.5rem;
   display: flex;
   align-items: center;
 }
