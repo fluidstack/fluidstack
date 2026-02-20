@@ -5,4 +5,4 @@ Disallow: /js/
 Disallow: /css/
 Disallow: /php/
 
-Sitemap: https://fluidstack.dev/sitemap.xml
+Sitemap: https://fluidstack.com.au/sitemap.xml
