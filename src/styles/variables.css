@@ -8,12 +8,12 @@
   --color-text-muted: #8892a8;
   --color-text-heading: #ffffff;
 
-  --color-accent: #eea156;
-  --color-accent-dark: #d4883e;
-  --color-accent-light: #f4b87a;
+  --color-accent: #f79530;
+  --color-accent-dark: #d97e1a;
+  --color-accent-light: #f9ab5c;
 
-  --color-gradient-start: #eea156;
-  --color-gradient-end: #e8934a;
+  --color-gradient-start: #f79530;
+  --color-gradient-end: #e8861e;
 
   --color-success: #10b981;
   --color-warning: #f59e0b;
@@ -32,7 +32,7 @@
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
   --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
-  --shadow-glow: 0 0 40px rgba(238, 161, 86, 0.15);
+  --shadow-glow: 0 0 40px rgba(247, 149, 48, 0.15);
 
   --transition-fast: 0.2s ease;
   --transition-base: 0.3s ease;

@@ -33,7 +33,7 @@
 .shape-2 {
   width: 400px;
   height: 400px;
-  background: #d4883e;
+  background: #d97e1a;
   bottom: -100px;
   left: -100px;
   animation: float 25s infinite ease-in-out reverse;
@@ -70,9 +70,9 @@
   color: var(--color-accent);
   margin-bottom: 24px;
   padding: 8px 20px;
-  border: 1px solid rgba(238, 161, 86, 0.3);
+  border: 1px solid rgba(247, 149, 48, 0.3);
   border-radius: 50px;
-  background: rgba(238, 161, 86, 0.08);
+  background: rgba(247, 149, 48, 0.08);
   animation: fadeInUp 0.6s ease forwards;
 }
 
@@ -214,7 +214,7 @@
 }
 
 .code-keyword { color: #c084fc; }
-.code-var { color: #f4b87a; }
+.code-var { color: #f9ab5c; }
 .code-prop { color: var(--color-accent-light); }
 .code-string { color: #34d399; }
 .code-func { color: #fbbf24; }
