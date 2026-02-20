@@ -65,7 +65,21 @@
 }
 
 @media (max-width: 991px) {
+  #mainNav .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #mainNav .navbar-toggler {
+    order: 1;
+    margin-left: 12px;
+  }
+
   #mainNav .navbar-collapse {
+    order: 2;
+    flex-basis: 100%;
     background: rgba(10, 14, 23, 0.98);
     backdrop-filter: blur(20px);
     margin-top: 16px;
