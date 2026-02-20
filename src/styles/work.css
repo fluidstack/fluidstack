@@ -80,11 +80,11 @@
   font-size: 0.8125rem;
   font-weight: 600;
   color: var(--color-accent);
-  background: rgba(14, 165, 233, 0.15);
+  background: rgba(238, 161, 86, 0.15);
   backdrop-filter: blur(8px);
   padding: 6px 16px;
   border-radius: 50px;
-  border: 1px solid rgba(14, 165, 233, 0.3);
+  border: 1px solid rgba(238, 161, 86, 0.3);
 }
 
 .work-info {

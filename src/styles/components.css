@@ -33,9 +33,9 @@
   color: var(--color-accent);
   margin-bottom: 12px;
   padding: 6px 16px;
-  border: 1px solid rgba(14, 165, 233, 0.3);
+  border: 1px solid rgba(238, 161, 86, 0.3);
   border-radius: 50px;
-  background: rgba(14, 165, 233, 0.08);
+  background: rgba(238, 161, 86, 0.08);
 }
 
 .section-title {
@@ -75,7 +75,7 @@
 .btn-accent:hover {
   color: #fff;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(14, 165, 233, 0.35);
+  box-shadow: 0 8px 24px rgba(238, 161, 86, 0.35);
 }
 
 .btn-accent:hover::before {

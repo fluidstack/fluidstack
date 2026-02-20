@@ -40,7 +40,7 @@
   align-items: center;
   justify-content: center;
   border-radius: var(--radius-md);
-  background: rgba(14, 165, 233, 0.1);
+  background: rgba(238, 161, 86, 0.1);
   color: var(--color-accent);
   font-size: 1.5rem;
   margin-bottom: 20px;
@@ -48,7 +48,7 @@
 }
 
 .service-card:hover .service-icon {
-  background: rgba(14, 165, 233, 0.2);
+  background: rgba(238, 161, 86, 0.2);
   transform: scale(1.1);
 }
 
@@ -75,8 +75,8 @@
   font-size: 0.75rem;
   font-weight: 500;
   color: var(--color-accent);
-  background: rgba(14, 165, 233, 0.08);
-  border: 1px solid rgba(14, 165, 233, 0.2);
+  background: rgba(238, 161, 86, 0.08);
+  border: 1px solid rgba(238, 161, 86, 0.2);
   padding: 4px 12px;
   border-radius: 50px;
 }
@@ -94,7 +94,7 @@
 .process-number {
   font-size: 3rem;
   font-weight: 800;
-  color: rgba(14, 165, 233, 0.15);
+  color: rgba(238, 161, 86, 0.15);
   margin-bottom: 16px;
   line-height: 1;
 }
