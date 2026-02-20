@@ -1,5 +1,4 @@
 import $ from 'jquery';
-import { supabase } from './supabase.js';
 
 export function initContact() {
   const $form = $('#contactForm');
@@ -9,7 +8,7 @@ export function initContact() {
   const $success = $('#formSuccess');
   const $error = $('#formError');
 
-  $form.on('submit', async function (e) {
+  $form.on('submit', function (e) {
     e.preventDefault();
     e.stopPropagation();
 
@@ -19,6 +18,7 @@ export function initContact() {
     const name = $('#nameInput').val().trim();
     const email = $('#emailInput').val().trim();
     const phone = $('#phoneInput').val().trim();
+    const service = $('#serviceSelect').val();
     const message = $('#messageInput').val().trim();
 
     let valid = true;
@@ -51,40 +51,29 @@ export function initContact() {
     $btnLoader.removeClass('d-none');
     $submitBtn.prop('disabled', true);
 
-    const service = $('#serviceSelect').val();
-
-    try {
-      const { error: dbError } = await supabase
-        .from('contact_submissions')
-        .insert({
-          name,
-          email,
-          phone,
-          message
-        });
-
-      if (dbError) throw dbError;
-
-      const apiUrl = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-contact-email`;
-      await fetch(apiUrl, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ name, email, phone, service, message }),
-      });
-
-      $success.removeClass('d-none');
-      $form[0].reset();
-      $form.find('.is-invalid').removeClass('is-invalid');
-    } catch (err) {
-      $error.removeClass('d-none');
-    } finally {
-      $btnText.removeClass('d-none');
-      $btnLoader.addClass('d-none');
-      $submitBtn.prop('disabled', false);
-    }
+    $.ajax({
+      url: 'php/send-email.php',
+      type: 'POST',
+      dataType: 'json',
+      data: { name, email, phone, service, message },
+      success: function (response) {
+        if (response.success) {
+          $success.removeClass('d-none');
+          $form[0].reset();
+          $form.find('.is-invalid').removeClass('is-invalid');
+        } else {
+          $error.removeClass('d-none');
+        }
+      },
+      error: function () {
+        $error.removeClass('d-none');
+      },
+      complete: function () {
+        $btnText.removeClass('d-none');
+        $btnLoader.addClass('d-none');
+        $submitBtn.prop('disabled', false);
+      }
+    });
   });
 
   $form.find('.form-control, .form-select').on('input change', function () {

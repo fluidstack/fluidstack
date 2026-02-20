@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite';
+import { resolve } from 'path';
 
 export default defineConfig({
   root: '.',
@@ -6,6 +7,15 @@ export default defineConfig({
     outDir: 'dist',
     rollupOptions: {
       input: 'index.html',
+    },
+  },
+  publicDir: false,
+  server: {
+    proxy: {
+      '/php': {
+        target: 'http://localhost',
+        changeOrigin: true,
+      },
     },
   },
 });
