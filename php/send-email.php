@@ -26,6 +26,12 @@ use PHPMailer\PHPMailer\Exception;
 
 loadEnv(__DIR__ . '/../.env');
 
+$honeypot = filter_input(INPUT_POST, 'website', FILTER_SANITIZE_SPECIAL_CHARS);
+if (!empty($honeypot)) {
+    echo json_encode(['success' => true, 'message' => 'Your message has been sent successfully']);
+    exit;
+}
+
 $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
 $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
 $phone = filter_input(INPUT_POST, 'phone', FILTER_SANITIZE_SPECIAL_CHARS);

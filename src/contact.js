@@ -20,6 +20,7 @@ export function initContact() {
     const phone = $('#phoneInput').val().trim();
     const service = $('#serviceSelect').val();
     const message = $('#messageInput').val().trim();
+    const website = $('#websiteInput').val();
 
     let valid = true;
 
@@ -55,7 +56,7 @@ export function initContact() {
       url: 'php/send-email.php',
       type: 'POST',
       dataType: 'json',
-      data: { name, email, phone, service, message },
+      data: { name, email, phone, service, message, website },
       success: function (response) {
         if (response.success) {
           $success.removeClass('d-none');
