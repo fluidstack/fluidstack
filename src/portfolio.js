@@ -1,4 +1,4 @@
-import $ from 'jquery';
+const $ = window.jQuery;
 
 export function initPortfolio() {
   const $filterBtns = $('.filter-btn');

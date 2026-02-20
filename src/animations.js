@@ -1,4 +1,4 @@
-import $ from 'jquery';
+const $ = window.jQuery;
 
 export function initAnimations() {
   initCountUp();

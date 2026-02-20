@@ -10,9 +10,6 @@ export default defineConfig({
     },
   },
   publicDir: false,
-  optimizeDeps: {
-    include: ['bootstrap/dist/css/bootstrap.min.css', 'bootstrap/dist/js/bootstrap.bundle.min.js', 'jquery'],
-  },
   server: {
     proxy: {
       '/php': {
