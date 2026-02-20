@@ -9,7 +9,7 @@ export default defineConfig({
       input: 'index.html',
     },
   },
-  publicDir: false,
+  publicDir: 'public',
   server: {
     proxy: {
       '/php': {
