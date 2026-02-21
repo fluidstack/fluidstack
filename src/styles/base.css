@@ -64,16 +64,16 @@ p {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-bg);
+  background: #f0f0f0;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-bg-card);
+  background: #ccc;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-text-muted);
+  background: #999;
 }
 
 .skip-link {

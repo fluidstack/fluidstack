@@ -1,6 +1,6 @@
 .hero-section {
   position: relative;
-  background: var(--color-bg);
+  background: #1a1a1a;
   overflow: hidden;
   min-height: 100vh;
   display: flex;
@@ -84,11 +84,12 @@
   letter-spacing: -0.02em;
   animation: fadeInUp 0.6s ease 0.1s forwards;
   opacity: 0;
+  color: #ffffff;
 }
 
 .hero-text {
   font-size: 1.125rem;
-  color: var(--color-text-muted);
+  color: rgba(255, 255, 255, 0.7);
   max-width: 520px;
   margin-bottom: 40px;
   line-height: 1.7;
@@ -124,7 +125,7 @@
   transform: translateY(-50%);
   height: 40px;
   width: 1px;
-  background: var(--color-border-light);
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .stat-number {
@@ -143,7 +144,7 @@
 
 .stat-label {
   font-size: 0.8125rem;
-  color: var(--color-text-muted);
+  color: rgba(255, 255, 255, 0.5);
   display: block;
   margin-top: 4px;
 }
@@ -172,19 +173,19 @@
 }
 
 .code-window {
-  background: var(--color-bg-card);
-  border: 1px solid var(--color-border);
+  background: #111;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: var(--shadow-lg), var(--shadow-glow);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), var(--shadow-glow);
 }
 
 .code-header {
   display: flex;
   gap: 8px;
   padding: 16px 20px;
-  background: rgba(0, 0, 0, 0.3);
-  border-bottom: 1px solid var(--color-border);
+  background: rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .dot {
@@ -210,7 +211,7 @@
 }
 
 .code-body code {
-  color: var(--color-text-muted);
+  color: #9ba3b7;
 }
 
 .code-keyword { color: #c084fc; }

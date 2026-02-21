@@ -1,6 +1,6 @@
 .site-footer {
-  background: var(--color-bg);
-  border-top: 1px solid var(--color-border);
+  background: #1a1a1a;
+  border-top: none;
   padding: 64px 0 32px;
 }
 
@@ -22,6 +22,7 @@
 .footer-desc {
   font-size: 0.9375rem;
   max-width: 320px;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .footer-heading {
@@ -45,7 +46,7 @@
 
 .footer-links a {
   font-size: 0.9375rem;
-  color: var(--color-text-muted);
+  color: rgba(255, 255, 255, 0.6);
   transition: color var(--transition-fast);
 }
 
@@ -56,13 +57,13 @@
 .footer-bottom {
   margin-top: 48px;
   padding-top: 24px;
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   text-align: center;
 }
 
 .footer-bottom p {
   font-size: 0.875rem;
-  color: var(--color-text-muted);
+  color: rgba(255, 255, 255, 0.4);
   margin: 0;
 }
 

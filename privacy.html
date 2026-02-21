@@ -22,7 +22,7 @@
   <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
   <link rel="manifest" href="/manifest.json">
-  <meta name="theme-color" content="#0a0a0f">
+  <meta name="theme-color" content="#ffffff">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -77,12 +77,25 @@
     }
 
     .privacy-nav-solid {
-      background: rgba(10, 14, 23, 0.95) !important;
+      background: rgba(255, 255, 255, 0.95) !important;
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       padding: 10px 0 !important;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
       border-bottom: 1px solid var(--color-border);
+    }
+
+    .privacy-nav-solid .nav-link {
+      color: #555 !important;
+    }
+
+    .privacy-nav-solid .nav-link:hover,
+    .privacy-nav-solid .nav-link.active {
+      color: #1a1a1a !important;
+    }
+
+    .privacy-nav-solid .navbar-toggler-icon {
+      filter: invert(1) grayscale(100%) brightness(0.3);
     }
   </style>
 </head>
