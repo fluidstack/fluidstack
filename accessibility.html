@@ -14,7 +14,7 @@
   <meta property="og:url" content="https://fluidstack.com.au/accessibility.html">
   <meta property="og:site_name" content="FluidStack">
   <meta property="og:locale" content="en_AU">
-  <meta property="og:image" content="https://fluidstack.com.au/images/fluidstack_new_logo_2.png">
+  <meta property="og:image" content="https://fluidstack.com.au/images/fluidstack_logo_white.png">
 
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -87,12 +87,29 @@
     }
 
     .a11y-nav-solid {
-      background: rgba(10, 14, 23, 0.95) !important;
+      background: rgba(255, 255, 255, 0.95) !important;
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       padding: 10px 0 !important;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
       border-bottom: 1px solid var(--color-border);
+    }
+
+    .a11y-nav-solid .nav-link {
+      color: #555 !important;
+    }
+
+    .a11y-nav-solid .nav-link:hover,
+    .a11y-nav-solid .nav-link.active {
+      color: #1a1a1a !important;
+    }
+
+    .a11y-nav-solid .navbar-toggler-icon {
+      filter: invert(1) grayscale(100%) brightness(0.3);
+    }
+
+    .a11y-nav-solid .brand-logo {
+      filter: brightness(0) saturate(100%) invert(58%) sepia(98%) saturate(500%) hue-rotate(360deg) brightness(97%) contrast(96%);
     }
   </style>
 </head>
@@ -104,7 +121,7 @@
   <nav id="mainNav" class="navbar navbar-expand-lg fixed-top navbar-dark a11y-nav-solid" aria-label="Main navigation">
     <div class="container">
       <a class="navbar-brand fw-bold" href="index.html#hero">
-        <img src="images/fluidstack_new_logo_2.png" alt="FluidStack - Web Development Agency" class="brand-logo" width="160" height="40">
+        <img src="images/fluidstack_logo_white.png" alt="FluidStack - Web Development Agency" class="brand-logo" width="160" height="40">
       </a>
       <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -207,7 +224,7 @@
       <div class="row g-4">
         <div class="col-lg-4">
           <a class="footer-brand" href="index.html#hero">
-            <img src="images/fluidstack_new_logo_2.png" alt="FluidStack - Back to top" class="brand-logo" loading="lazy" width="160" height="40">
+            <img src="images/fluidstack_logo_white.png" alt="FluidStack - Back to top" class="brand-logo" loading="lazy" width="160" height="40">
           </a>
           <p class="footer-desc">Crafting exceptional digital experiences since 2009. We turn ideas into reality with code, design, and strategy.</p>
         </div>
