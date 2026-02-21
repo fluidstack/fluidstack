@@ -22,11 +22,19 @@
 }
 
 #mainNav .brand-logo {
-  transition: filter var(--transition-base);
+  transition: opacity var(--transition-base);
 }
 
-#mainNav.scrolled .brand-logo {
-  filter: brightness(0) saturate(100%) invert(58%) sepia(98%) saturate(500%) hue-rotate(360deg) brightness(97%) contrast(96%);
+#mainNav .brand-logo-dark {
+  display: none;
+}
+
+#mainNav.scrolled .brand-logo-white {
+  display: none;
+}
+
+#mainNav.scrolled .brand-logo-dark {
+  display: block;
 }
 
 #mainNav .nav-link {
